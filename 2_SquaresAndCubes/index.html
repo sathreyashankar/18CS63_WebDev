@@ -1,0 +1,38 @@
+<!-- Write a JavaScript that calculates the squares and cubes of the numbers from 0 to 10 and outputs HTML text that displays the resulting value in an HTML table format. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CS041 | SquaesAndCubes</title>
+    <style>
+        body {
+            background-color: #cecece;
+        }
+        table {
+            background-color: #eee;
+            border-collapse: separate;
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+
+<body>
+    <table align="center" border=1>
+        <tr>
+            <td>Number</td>
+            <td>Squares</td>
+            <td>Cubes</td>
+        </tr>
+        <script type="text/javascript">
+            for (var n = 0; n <= 10; n++) {
+                document.write("<tr><td>" + n + "</td><td>" + n * n + "</td><td>" + n * n * n + "</td></tr>");
+            }
+        </script>
+    </table>
+</body>
+
+</html>

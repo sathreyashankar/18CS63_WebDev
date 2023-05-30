@@ -1,0 +1,79 @@
+<!-- Write a JavaScript to design a simple calculator to perform the following operations : sum, product, difference and quotient. -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CS041 | Calculator</title>
+    <style>
+        body {
+            background-color: #efefef;
+        }
+
+        table {
+            border: 10px solid #aaa;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        td {
+            padding: 20px;
+            background-color: #e0e0e0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1 style="text-align: center; color: #4545ff;">Simple Calculator using JavaScript</h1>
+    <table>
+        <tr>
+            <td>Enter the 1st number: </td>
+            <td><input type="number" name="num1" id="num1"></td>
+        </tr>
+        <tr>
+            <th colspan="2">
+                <input type="button" value="+" onclick="performop(this.value);" />
+                <input type="button" value="-" onclick="performop(this.value);" />
+                <input type="button" value="*" onclick="performop(this.value);" />
+                <input type="button" value="/" onclick="performop(this.value);" />
+            </th>
+        </tr>
+        <tr>
+            <td>Enter the 2nd number: </td>
+            <td><input type="number" name="num2" id="num2"></td>
+        </tr>
+        <tr>
+            <th>Result</th>
+            <td><input type="number" name="res" id="res" readonly /></td>
+        </tr>
+    </table>
+    <script>
+        function performop(op) {
+            var n1 = parseInt(document.getElementById("num1").value);
+            var n2 = parseInt(document.getElementById("num2").value);
+            var result = 0;
+            if (op == "+") {
+                result = n1 + n2;
+            } else if (op == "-") {
+                result = n1 - n2;
+            } else if (op == "*") {
+                result = n1 * n2;
+            } else if (op == "/") {
+                if (n2 == 0) {
+                    alert("Divide by zero error !!!");
+                } else {
+                    result = n1 / n2;
+                }
+            }
+            document.getElementById("res").value = result;
+        }
+    </script>
+</body>
+
+</html>
